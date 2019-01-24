@@ -37,7 +37,6 @@ class PTunnel(Packet):
     ]
 
     def guess_payload_class(self, payload):
-            print repr(payload)
             if self.state == 4 and self.from_proxy == 0:
                 # authentication challenge
                 return PTunnelChallenge
